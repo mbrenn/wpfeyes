@@ -1,0 +1,9 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:WPFEyesLib="clr-namespace:WPFEyesLib;assembly=WPFEyesLib" x:Class="WPFEyes.MainWindow"
+        Title="Deine blauen Augen" Height="350" Width="525">
+    <Grid>
+        <WPFEyesLib:WPFEyesControl FillInner="Black" FillOuter="LightBlue" />
+    </Grid>
+</Window>
