@@ -57,10 +57,6 @@ namespace WPFEyesLib
         public static readonly DependencyProperty FillOuterProperty =
             DependencyProperty.Register("FillOuter", typeof(Brush), typeof(WPFEyesControl), new PropertyMetadata(Brushes.White));
 
-
-
-
-
         // Using a DependencyProperty as the backing store for DistanceBetween.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DistanceBetweenProperty =
             DependencyProperty.Register("DistanceBetween", typeof(double), typeof(WPFEyesControl), new PropertyMetadata(0.4));

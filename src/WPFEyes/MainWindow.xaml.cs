@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,48 @@ namespace WPFEyes
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        /// <summary>
+        /// Stores the last cursor position for scrolling
+        /// </summary>
+        private Point lastCursorPosition;
+
+        private bool isPressed;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.lastCursorPosition = this.PointToScreen(e.GetPosition(this));
+            this.CaptureMouse();
+            Debug.WriteLine("Down: " + this.lastCursorPosition.X.ToString() + ", " + this.lastCursorPosition.Y.ToString());
+            this.isPressed = true;
+        }
+
+        private void Grid_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Debug.WriteLine("Up");
+            this.isPressed = false;
+            this.ReleaseMouseCapture();
+        }
+
+        private void Grid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (this.isPressed)
+            {
+                var nextPosition = this.PointToScreen(e.GetPosition(this));
+                var dX = nextPosition.X - this.lastCursorPosition.X;
+                var dY = nextPosition.Y - this.lastCursorPosition.Y;
+
+                Debug.WriteLine("X: " + dX.ToString() + ", Y:" + dY.ToString());
+
+                this.Left += dX;
+                this.Top += dY;
+                this.lastCursorPosition = nextPosition;
+            }
         }
     }
 }
