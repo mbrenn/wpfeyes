@@ -59,7 +59,7 @@ namespace WPFEyesLib
 
         // Using a DependencyProperty as the backing store for DistanceBetween.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DistanceBetweenProperty =
-            DependencyProperty.Register("DistanceBetween", typeof(double), typeof(WPFEyesControl), new PropertyMetadata(0.4));
+            DependencyProperty.Register("DistanceBetween", typeof(double), typeof(WPFEyesControl), new PropertyMetadata(0.3));
 
         // Using a DependencyProperty as the backing store for RatioInnerOut.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty RatioInnerOutProperty =

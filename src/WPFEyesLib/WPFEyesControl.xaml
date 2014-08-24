@@ -10,5 +10,6 @@
         <Ellipse Width="50" Height="50" x:Name="OuterRight" Fill="White"></Ellipse>
         <Ellipse Width="20" Height="20" x:Name="InnerLeft" Fill="Black"></Ellipse>
         <Ellipse Width="20" Height="20" x:Name="InnerRight" Fill="Black"></Ellipse>
+
     </Canvas>
 </UserControl>

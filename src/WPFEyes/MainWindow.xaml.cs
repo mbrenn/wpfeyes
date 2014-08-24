@@ -21,7 +21,6 @@ namespace WPFEyes
     /// </summary>
     public partial class MainWindow : Window
     {
-
         /// <summary>
         /// Stores the last cursor position for scrolling
         /// </summary>
@@ -63,6 +62,31 @@ namespace WPFEyes
                 this.Top += dY;
                 this.lastCursorPosition = nextPosition;
             }
+        }
+
+        private void Small_Click(object sender, RoutedEventArgs e)
+        {
+            this.Width = 70;
+            this.Height = 40;
+
+        }
+
+        private void Medium_Click(object sender, RoutedEventArgs e)
+        {
+            this.Width = 150;
+            this.Height = 100;
+
+        }
+
+        private void Large_Click(object sender, RoutedEventArgs e)
+        {
+            this.Width = 500;
+            this.Height= 200;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
