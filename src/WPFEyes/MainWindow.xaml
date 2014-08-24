@@ -4,7 +4,7 @@
         xmlns:WPFEyesLib="clr-namespace:WPFEyesLib;assembly=WPFEyesLib" x:Class="WPFEyes.MainWindow"
         Title="Deine blauen Augen" Height="80" Width="200" AllowsTransparency="True"
         WindowStyle="None" Background="Transparent" Topmost="True"
-    MouseDown="Grid_MouseDown" MouseUp="Grid_MouseUp" MouseMove="Grid_MouseMove">
+    MouseDown="Grid_MouseDown" MouseUp="Grid_MouseUp" MouseMove="Grid_MouseMove" ShowInTaskbar="False" ResizeMode="NoResize">
     <Grid >
         <WPFEyesLib:WPFEyesControl FillInner="Black" FillOuter="LightBlue" />
         <Grid.ContextMenu>
